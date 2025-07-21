@@ -56,4 +56,18 @@ ThemeData appTheme = ThemeData(
     shadowColor: Colors.transparent,
     margin: const EdgeInsets.only(bottom: 16),
   ),
+
+  // input decoration theme
+  inputDecorationTheme: InputDecorationTheme(
+    filled: true,
+    fillColor: AppColors.secondaryColor.withOpacity(0.5),
+    border: InputBorder.none,
+    labelStyle: TextStyle(color: AppColors.textColor),
+    prefixIconColor: AppColors.textColor,
+  ),
+
+  dialogTheme: DialogThemeData(
+    backgroundColor: AppColors.secondaryAccent,
+    surfaceTintColor: Colors.transparent,
+  ),
 );
