@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rpg/screens/home/home.dart';
 import 'package:flutter_rpg/screens/create/create.dart';
+import 'package:flutter_rpg/services/character_store.dart';
 import 'package:flutter_rpg/theme.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MaterialApp(theme: appTheme, home: Home()));
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CharacterStore(),
+      child: MaterialApp(theme: appTheme, home: Home()),
+    ),
+  );
 }
 
 class Sandbox extends StatelessWidget {
@@ -22,4 +29,4 @@ class Sandbox extends StatelessWidget {
   }
 }
 
-// START FROM TURTORIAL: 51
+// START FROM TURTORIAL: 64
